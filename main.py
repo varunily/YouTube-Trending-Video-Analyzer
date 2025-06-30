@@ -11,7 +11,6 @@ print("Unique categories:", df['category_id'].nunique())
 
 # Top 10 video categories by views
 top_categories = df.groupby('category_id')['views'].sum().sort_values(ascending=False).head(10)
-
 # Plot
 plt.figure(figsize=(10,6))
 top_categories.plot(kind='bar')
